@@ -1,5 +1,3 @@
-# Arduino-Projects
-
 # Hardware: 
 Arduino board, OSEPP Motor Board, 4 DC motors with gearboxes and wheels
 
