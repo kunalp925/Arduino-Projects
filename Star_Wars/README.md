@@ -1,15 +1,10 @@
 # Hardware: 
-Arduino board, OSEPP Motor Board, 4 DC motors with gearboxes and wheels
+Arduino board, speaker/piezo buzzer (I used a piezzo buzzer, but a speaker works the same way), 1 Red Light and 1 Blue Light
 
 # Software: 
 Arduino IDE
 
-# Control RC car by sending values through Serial port:
+# Project
 
-'f' moves the car forward
+Piezzo buzzer plays the star wars theme song using tones (tone melody). The song is played using tones. The pitches header file provides the notes and the number that corresponds to the note being played. The lights change according to the tempo of the music.
 
-'b' moves the car in reverse
-
-'r' turns the car right
-
-'l' turns the car left
