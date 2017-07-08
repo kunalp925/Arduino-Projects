@@ -20,15 +20,15 @@ const int gSH = 830;
 const int aH = 880;
  
 const int buzzerPin = 8;
-const int ledPin1 = 12;
-const int ledPin2 = 13;
+const int ledPin1 = 12; //Red Light
+const int ledPin2 = 13; // Blue Light
  
 int counter = 0;
  
 void setup()
 {
   //Setup pin modes
-  pinMode(buzzerPin, OUTPUT);
+  pinMode(speaker, OUTPUT); //speaker buzzer
   pinMode(ledPin1, OUTPUT);
   pinMode(ledPin2, OUTPUT);
 }
@@ -70,28 +70,28 @@ void loop()
   delay(650);
 }
  
-void beep(int note, int duration)
+void beep(int note, int timeLength)
 {
-  //Play tone on buzzerPin
-  tone(buzzerPin, note, duration);
+  //Play tone on speaker
+  tone(speaker, note, timeLength);
  
   //Play different LED depending on value of 'counter'
   if(counter % 2 == 0)
   {
     digitalWrite(ledPin1, HIGH);
-    delay(duration);
+    delay(timeLength);
     digitalWrite(ledPin1, LOW);
   }else
   {
     digitalWrite(ledPin2, HIGH);
-    delay(duration);
+    delay(timeLength);
     digitalWrite(ledPin2, LOW);
   }
  
-  //Stop tone on buzzerPin
-  noTone(buzzerPin);
+  //Stop tone
+  noTone(speaker);
  
-  delay(50);
+  delay(50); 
  
   //Increment counter
   counter++;
