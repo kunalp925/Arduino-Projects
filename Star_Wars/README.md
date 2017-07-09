@@ -2,7 +2,7 @@
 Arduino board, speaker/piezo buzzer (I used a piezzo buzzer, but a speaker works the same way), 1 Red Light and 1 Blue Light
 
 # Software: 
-Arduino IDE
+Arduino IDE, Pitches.h file
 
 # Project
 

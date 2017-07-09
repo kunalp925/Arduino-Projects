@@ -1,4 +1,4 @@
-
+//defined the tone numbers using pitches.h file
 const int c = 261;
 const int d = 294;
 const int e = 329;
@@ -25,16 +25,14 @@ const int ledPin2 = 13; // Blue Light
  
 int counter = 0;
  
-void setup()
-{
+void setup(){
   //Setup pin modes
   pinMode(speaker, OUTPUT); //speaker buzzer
-  pinMode(ledPin1, OUTPUT);
-  pinMode(ledPin2, OUTPUT);
+  pinMode(ledPin1, OUTPUT); //Red Light
+  pinMode(ledPin2, OUTPUT); //Blue Light
 }
  
-void loop()
-{
+void loop(){
  
   //Play first section
   firstSection();
@@ -70,19 +68,17 @@ void loop()
   delay(650);
 }
  
-void beep(int note, int timeLength)
-{
+void beep(int note, int timeLength){ // pass in the note to play, and how long to play the note for
+
   //Play tone on speaker
   tone(speaker, note, timeLength);
- 
-  //Play different LED depending on value of 'counter'
-  if(counter % 2 == 0)
-  {
+  //LED is dependent on counter
+  if(counter % 2 == 0){
     digitalWrite(ledPin1, HIGH);
     delay(timeLength);
     digitalWrite(ledPin1, LOW);
-  }else
-  {
+  }
+  else{
     digitalWrite(ledPin2, HIGH);
     delay(timeLength);
     digitalWrite(ledPin2, LOW);
@@ -92,13 +88,10 @@ void beep(int note, int timeLength)
   noTone(speaker);
  
   delay(50); 
- 
-  //Increment counter
   counter++;
 }
  
-void firstSection()
-{
+void firstSection(){
   beep(a, 500);
   beep(a, 500);    
   beep(a, 500);
@@ -124,8 +117,7 @@ void firstSection()
   delay(500);
 }
  
-void secondSection()
-{
+void secondSection(){
   beep(aH, 500);
   beep(a, 300);
   beep(a, 150);
